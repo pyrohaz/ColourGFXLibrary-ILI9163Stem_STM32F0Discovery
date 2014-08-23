@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O1 -c -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -DSTM32F050F6 -DSTM32F0XX_LD -I..\..\..\workspace\ILI9163\stm32_lib\inc -I..\..\..\workspace\ILI9163 -I..\..\..\workspace -I..\..\..\workspace\ILI9163\cmsis_boot -I..\..\..\workspace\ILI9163\stm32_lib -I..\..\.. -I..\..\..\workspace\ILI9163\cmsis_core">
+      <target file="syscalls.o" lastModified="147f57a2b14">
+         <source file="..\..\..\syscalls\syscalls.c" lastModified="146176cd49a"/>
+      </target>
+      <target file="stm32f0xx_spi.o" lastModified="147f57a2856">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_spi.c" lastModified="14615f28f8d"/>
+      </target>
+      <target file="GFXC.o" lastModified="14804fddc19">
+         <source file="..\..\..\GFXC.c" lastModified="14804fdc7c1"/>
+      </target>
+      <target file="stm32f0xx_gpio.o" lastModified="147f57a29d2">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_gpio.c" lastModified="14615f28531"/>
+      </target>
+      <target file="stm32f0xx_rcc.o" lastModified="147f57a2064">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="14615f27d9d"/>
+      </target>
+      <target file="stm32f0xx_adc.o" lastModified="147f57a21e1">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_adc.c" lastModified="147f56c7e56"/>
+      </target>
+      <target file="main.o" lastModified="148052fa9eb">
+         <source file="..\..\..\main.c" lastModified="148052fa597"/>
+      </target>
+      <target file="system_stm32f0xx.o" lastModified="147f57a2c6e">
+         <source file="..\..\..\..\STM32F050TSSOP\cmsis_boot\system_stm32f0xx.c" lastModified="1462036f8db"/>
+      </target>
+      <target file="startup_stm32f0xx.o" lastModified="147f57a26d4">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f0xx.s" lastModified="14615f27da9"/>
+      </target>
+      <target file="ILI9163.o" lastModified="1480490e809">
+         <source file="..\..\..\ILI9163.c" lastModified="14804736f8c"/>
+      </target>
+   </processor>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O0 -c -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -DSTM32F050F6 -DSTM32F0XX_LD -I..\..\..\workspace\ILI9163\stm32_lib\inc -I..\..\..\workspace\ILI9163 -I..\..\..\workspace -I..\..\..\workspace\ILI9163\cmsis_boot -I..\..\..\workspace\ILI9163\stm32_lib -I..\..\.. -I..\..\..\workspace\ILI9163\cmsis_core">
+      <target file="system_stm32f0xx_temp.o" lastModified="146203cd5a8">
+         <source file="..\..\..\cmsis_boot\system_stm32f0xx_temp.c" lastModified="14615f27dbf"/>
+      </target>
+   </processor>
+</history>
