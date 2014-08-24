@@ -28,6 +28,7 @@ uint8_t Triangle(uint8_t, uint8_t, uint8_t, uint16_t, Colours8);
 uint8_t Row(uint8_t, uint8_t, uint8_t, Colours8);
 uint8_t Column(uint8_t, uint8_t, uint8_t, Colours8);
 
+void RotateCo(int32_t *, int32_t *, int32_t);
 uint32_t IAbs(int32_t);
 int16_t qSin(int32_t);
 uint32_t StrLen(char *);

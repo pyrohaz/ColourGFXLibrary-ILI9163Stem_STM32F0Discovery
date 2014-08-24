@@ -25,6 +25,10 @@ void SysTick_Handler(void){
 
 	MSec++;
 }
+
+GPIO_InitTypeDef GP;
+ADC_InitTypeDef A;
+
 int main(void)
 {
 	SystemInit();
@@ -32,22 +36,37 @@ int main(void)
 	SysTick_Config(SystemCoreClock/1000);
 	ILI9163Init();
 
+	/*
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
+
+	GP.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1;
+	GP.GPIO_Mode = GPIO_Mode_AN;
+	GPIO_Init(GPIOB, &GP);
+
+	GP.GPIO_Pin = GPIO_Pin_10;
+	GP.GPIO_Mode = GPIO_Mode_IN;
+	GP.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_Init(GPIOB, &GP);
+
+	A.ADC_ContinuousConvMode = DISABLE;
+	A.ADC_DataAlign = ADC_DataAlign_Right;
+	A.ADC_ExternalTrigConvEdge = ADC_ExternalTrigConvEdge_None;
+	A.ADC_Resolution = ADC_Resolution_8b;
+	ADC_Init(ADC1, &A);
+	ADC_Cmd(ADC1, ENABLE);
+	*/
+
 	SleepMode(Awake);
 
-	int XPos = 0, Cnt;
+	int XPos = 0, Cnt, XR, YR, A = 0;
 
 	SetScrn(Black);
 
 	while(1)
 	{
-		for(Cnt = 1; Cnt<100; Cnt++){
-			if(Cnt<50) PStr("Text", 0, 0, 1, ColP(100-Cnt, 0, Cnt), Black);
-			else PStr("Text", 0, 0, 2, ColP(Cnt-50, 0, 100-Cnt), Black);
-			Triangle(96, 64, (Cnt-1)>>1, (Cnt-1)*360/200, Black);
-			Triangle(96, 64, Cnt>>1, Cnt*360/200, ColP((Cnt%7)*12, Cnt, Cnt>>2));
-			PNum(Cnt, 0, 40, 3, 3, ColP(0, Cnt, (100-Cnt)), ColP(Cnt, (100-Cnt), 0));
-			PNumF((200-Cnt)*0.012f, 0, 80, 2, 2, ColP(Cnt, (100-Cnt), 0), ColP(0, Cnt, (100-Cnt)));
-		}
-		SetScrn(Black);
+		Triangle(64, 64, 80, A, Green);
+		A++;
+
 	}
 }

@@ -438,22 +438,26 @@ uint8_t Triangle(uint8_t X, uint8_t Y, uint8_t SideLen, uint16_t Angle, Colours8
 	RCoX = SLST;
 	RCoY = LCoY;
 
-	//Rotated co-ordinates
-	NTCoX = ((TCoX*qSin(Angle+90))>>10) - ((TCoY*qSin(Angle))>>10);
-	NTCoY = ((TCoX*qSin(Angle))>>10) + ((TCoY*qSin(Angle+90))>>10);
+	RotateCo(&TCoX, &TCoY, Angle);
+	RotateCo(&RCoX, &RCoY, Angle);
+	RotateCo(&LCoX, &LCoY, Angle);
 
-	NRCoX = ((RCoX*qSin(Angle+90))>>10) - ((RCoY*qSin(Angle))>>10);
-	NRCoY = ((RCoX*qSin(Angle))>>10) + ((RCoY*qSin(Angle+90))>>10);
-
-	NLCoX = ((LCoX*qSin(Angle+90))>>10) - ((LCoY*qSin(Angle))>>10);
-	NLCoY = ((LCoX*qSin(Angle))>>10) + ((LCoY*qSin(Angle+90))>>10);
-
-	LineC(NTCoX+X, NTCoY+Y, NLCoX+X, NLCoY+Y, Col);
-	LineC(NTCoX+X, NTCoY+Y, NRCoX+X, NRCoY+Y, Col);
-	LineC(NRCoX+X, NRCoY+Y, NLCoX+X, NLCoY+Y, Col);
+	LineC(TCoX+X, TCoY+Y, LCoX+X, LCoY+Y, Col);
+	LineC(TCoX+X, TCoY+Y, RCoX+X, RCoY+Y, Col);
+	LineC(RCoX+X, RCoY+Y, LCoX+X, LCoY+Y, Col);
 
 	return 0;
 
+}
+
+//Rotate co-ordinates around the origin
+void RotateCo(int32_t *X, int32_t *Y, int32_t Angle){
+	int32_t XT;
+
+	XT = ((*X*qSin(Angle+90))>>10) - ((*Y*qSin(Angle))>>10);
+	*Y = ((*X*qSin(Angle))>>10) + ((*Y*qSin(Angle+90))>>10);
+
+	*X = XT;
 }
 
 //Returns -1024 to 1024!

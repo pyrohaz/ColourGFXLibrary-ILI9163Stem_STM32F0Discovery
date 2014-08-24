@@ -12,10 +12,10 @@
           <Includepath path="."/>
         </Includepaths>
         <DefinedSymbols>
-          <Define name="USE_STDPERIPH_DRIVER"/>
-          <Define name="__ASSEMBLY__"/>
           <Define name="STM32F050F6"/>
           <Define name="STM32F0XX_LD"/>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="__ASSEMBLY__"/>
         </DefinedSymbols>
       </Compile>
       <Link useDefault="0">
@@ -35,7 +35,7 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
         </MemoryAreas>
-        <LocateLinkFile path="../../configuration/programdata/ili9163/arm-gcc-link.ld" type="0"/>
+        <LocateLinkFile path="../../../configuration/programdata/ili9163/arm-gcc-link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
@@ -71,7 +71,6 @@
     <ExcludeFile/>
   </Target>
   <Components path="./">
-    <Component id="30" name="C Library" path="" type="2"/>
     <Component id="46" name="M0 Cmsis Core" path="" type="2"/>
     <Component id="418" name="CMSIS BOOT" path="" type="2"/>
     <Component id="419" name="RCC" path="" type="2"/>
@@ -80,11 +79,11 @@
     <Component id="434" name="SPI" path="" type="2"/>
   </Components>
   <Files>
-    <File name="cmsis_boot/stm32f0xx_conf.h" path="cmsis_boot/stm32f0xx_conf.h" type="1"/>
     <File name="cmsis_core/core_cmInstr.h" path="cmsis_core/core_cmInstr.h" type="1"/>
+    <File name="cmsis_boot/stm32f0xx_conf.h" path="cmsis_boot/stm32f0xx_conf.h" type="1"/>
     <File name="cmsis_boot/startup/startup_stm32f0xx.s" path="cmsis_boot/startup/startup_stm32f0xx.s" type="1"/>
+    <File name="cmsis_boot/system_stm32f0xx_temp.c" path="cmsis_boot/system_stm32f0xx_temp.c" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
-    <File name="cmsis_boot/system_stm32f0xx.c" path="../STM32F050TSSOP/cmsis_boot/system_stm32f0xx.c" type="1"/>
     <File name="cmsis_core/core_cmFunc.h" path="cmsis_core/core_cmFunc.h" type="1"/>
     <File name="stm32_lib" path="" type="2"/>
     <File name="GFXC.c" path="GFXC.c" type="1"/>
@@ -95,19 +94,17 @@
     <File name="stm32_lib/inc" path="" type="2"/>
     <File name="stm32_lib/inc/stm32f0xx_spi.h" path="stm32_lib/inc/stm32f0xx_spi.h" type="1"/>
     <File name="cmsis_boot/stm32f0xx.h" path="cmsis_boot/stm32f0xx.h" type="1"/>
-    <File name="ILI9163.h" path="ILI9163.h" type="1"/>
     <File name="stm32_lib/src/stm32f0xx_adc.c" path="stm32_lib/src/stm32f0xx_adc.c" type="1"/>
+    <File name="ILI9163.h" path="ILI9163.h" type="1"/>
     <File name="ILI9163.c" path="ILI9163.c" type="1"/>
-    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="cmsis_core/core_cm0.h" path="cmsis_core/core_cm0.h" type="1"/>
     <File name="stm32_lib/inc/stm32f0xx_rcc.h" path="stm32_lib/inc/stm32f0xx_rcc.h" type="1"/>
-    <File name="syscalls" path="" type="2"/>
     <File name="cmsis_boot/system_stm32f0xx.h" path="cmsis_boot/system_stm32f0xx.h" type="1"/>
     <File name="stm32_lib/src/stm32f0xx_gpio.c" path="stm32_lib/src/stm32f0xx_gpio.c" type="1"/>
     <File name="stm32_lib/src/stm32f0xx_rcc.c" path="stm32_lib/src/stm32f0xx_rcc.c" type="1"/>
-    <File name="main.c" path="main.c" type="1"/>
-    <File name="stm32_lib/src" path="" type="2"/>
     <File name="stm32_lib/inc/stm32f0xx_adc.h" path="stm32_lib/inc/stm32f0xx_adc.h" type="1"/>
+    <File name="stm32_lib/src" path="" type="2"/>
+    <File name="main.c" path="main.c" type="1"/>
     <File name="GFXC.h" path="GFXC.h" type="1"/>
   </Files>
 </Project>
