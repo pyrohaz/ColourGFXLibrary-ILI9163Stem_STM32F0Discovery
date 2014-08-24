@@ -65,8 +65,9 @@ int main(void)
 
 	while(1)
 	{
-		Triangle(64, 64, 80, A, Green);
+		Rect(32, 32, 90, 90, A, Green);
 		A++;
+		Delay(100);
 
 	}
 }

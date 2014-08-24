@@ -37,10 +37,6 @@
          <include file="..\..\..\stm32_lib\inc\stm32f0xx_adc.h"/>
          <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>
       </source>
-      <source file="..\..\..\main.c" lastModified="148083e6e1d">
-         <include file="..\..\..\GFXC.h"/>
-         <include file="..\..\..\stm32_lib\inc\stm32f0xx_adc.h"/>
-      </source>
       <source file="..\..\..\stm32_lib\inc\stm32f0xx_spi.h" lastModified="148055c36a8">
          <include file="..\..\..\cmsis_boot\stm32f0xx.h"/>
       </source>
@@ -61,6 +57,9 @@
       <source file="..\..\..\stm32_lib\src\stm32f0xx_spi.c" lastModified="148055c36aa">
          <include file="..\..\..\stm32_lib\inc\stm32f0xx_spi.h"/>
          <include file="..\..\..\stm32_lib\inc\stm32f0xx_rcc.h"/>
+      </source>
+      <source file="..\..\..\GFXC.c" lastModified="14808525020">
+         <include file="..\..\..\GFXC.h"/>
       </source>
    </includePath>
 </dependencies>

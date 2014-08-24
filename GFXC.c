@@ -299,7 +299,7 @@ uint8_t Semicircle(uint8_t XS, uint8_t YS, uint8_t R, uint8_t UD, Colours8 Col){
 uint8_t Rect(uint8_t XS, uint8_t YS, uint8_t XE, uint8_t YE, uint16_t Angle, Colours8 Col){
 	int16_t XLM = - (IAbs(XE-XS)>>1), XRM = -XLM;
 	int16_t YTM = (IAbs(YE-YS)>>1), YBM = -YTM;
-	int16_t OrX = IAbs(XE-XS), OrY = IAbs(YE-YS);
+	int16_t OrX = XS+(IAbs(XE-XS)>>1), OrY = YS+(IAbs(YE-YS)>>1);
 	int32_t NTLCoX, NTRCoX, NBLCoX, NBRCoX;
 	int32_t NTLCoY, NTRCoY, NBLCoY, NBRCoY;
 
