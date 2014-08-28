@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O1 -c -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -DSTM32F050F6 -DSTM32F0XX_LD -I..\..\..\workspace\ILI9163\stm32_lib\inc -I..\..\..\workspace\ILI9163 -I..\..\..\workspace -I..\..\..\workspace\ILI9163\cmsis_boot -I..\..\..\workspace\ILI9163\stm32_lib -I..\..\.. -I..\..\..\workspace\ILI9163\cmsis_core">
+      <target file="syscalls.o" lastModified="147f57a2b14">
+         <source file="..\..\..\syscalls\syscalls.c" lastModified="146176cd49a"/>
+      </target>
+      <target file="system_stm32f0xx.o" lastModified="147f57a2c6e">
+         <source file="..\..\..\..\STM32F050TSSOP\cmsis_boot\system_stm32f0xx.c" lastModified="1462036f8db"/>
+      </target>
+   </processor>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O1 -c -DSTM32F050F6 -DSTM32F0XX_LD -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\workspace\ILI9163 -I..\..\..\workspace -I..\..\..\workspace\ILI9163\ColourGFXLibrary-ILI9163Stem_STM32F0Discovery\cmsis_core -I..\..\..\workspace\ILI9163\ColourGFXLibrary-ILI9163Stem_STM32F0Discovery\cmsis_boot -I..\..\..\workspace\ILI9163\ColourGFXLibrary-ILI9163Stem_STM32F0Discovery -I..\..\..\workspace\ILI9163\ColourGFXLibrary-ILI9163Stem_STM32F0Discovery\stm32_lib\inc -I..\..\..\workspace\ILI9163\ColourGFXLibrary-ILI9163Stem_STM32F0Discovery\stm32_lib">
+      <target file="stm32f0xx_spi.o" lastModified="148055c47e9">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_spi.c" lastModified="148055c36aa"/>
+      </target>
+      <target file="GFXC.o" lastModified="148085fa63c">
+         <source file="..\..\..\GFXC.c" lastModified="148085fa102"/>
+      </target>
+      <target file="stm32f0xx_gpio.o" lastModified="148055c4a3e">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_gpio.c" lastModified="148055c22ae"/>
+      </target>
+      <target file="stm32f0xx_rcc.o" lastModified="148055c40b6">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_rcc.c" lastModified="148055c1f0c"/>
+      </target>
+      <target file="stm32f0xx_adc.o" lastModified="148055c420b">
+         <source file="..\..\..\stm32_lib\src\stm32f0xx_adc.c" lastModified="148055c2a03"/>
+      </target>
+      <target file="main.o" lastModified="148085de129">
+         <source file="..\..\..\main.c" lastModified="148085d24c1"/>
+      </target>
+      <target file="startup_stm32f0xx.o" lastModified="148055c4679">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f0xx.s" lastModified="148055c1f11"/>
+      </target>
+      <target file="system_stm32f0xx_temp.o" lastModified="148055c4909">
+         <source file="..\..\..\cmsis_boot\system_stm32f0xx_temp.c" lastModified="148055c1f14"/>
+      </target>
+      <target file="ILI9163.o" lastModified="148055c4519">
+         <source file="..\..\..\ILI9163.c" lastModified="148053dbeeb"/>
+      </target>
+   </processor>
+</history>
